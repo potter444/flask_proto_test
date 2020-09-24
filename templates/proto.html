@@ -3,11 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>协议发送页面</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/proto.css') }}">
 </head>
 <body>
     <h3 class="page_title">协议发送</h3>
+        <p>登录账号为：{{ account }}</p>
+        <p>登录IP为：{{ session.get("ip") }}</p>
     <div>
         填写参数
     </div>
+    <div>
+        <form>
+            协议号：<input class="" type="text" name="proto_id">
+            协议名称：<input class="" type="text" name="proto_name">
+            <hr>
+            参数一：<input class="" type="text" name="key1">
+            值一：<input class="" type="text" name="value1"><br>
+            参数二：<input class="" type="text" name="key2">
+            值二：<input class="" type="text" name="value2"><br>
+            参数三：<input class="" type="text" name="key3">
+            值三：<input class="" type="text" name="value3"><br>
+            参数四：<input class="" type="text" name="key4">
+            值四：<input class="" type="text" name="value5"><br>
+            <input class="proto_submit" type="submit" value="提交">
+        </form>
+
+    </div>
+    <hr>
+
 </body>
 </html>
